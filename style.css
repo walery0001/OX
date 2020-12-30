@@ -1,7 +1,30 @@
 *{
-	box-sizing: border-box;
+
 }
 body{
 	margin: 0;
+	padding: 0;
 	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.boxContainer{
+	width: 416px;
+	height: 410px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: wrap;
+	
+	
+}
+.boxes{
+	width: 135px;
+	height: 135px;
+	
+	border: 1px solid;
+	font-size: 70px;
+	text-align: center;
+	line-height: 130px;
 }
