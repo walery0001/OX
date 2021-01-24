@@ -22,27 +22,23 @@ let   horizontal4 =  winningArray[4];
 let   horizontal5 =  winningArray[5];
 let   horizontal6 =  winningArray[6];
 let   horizontal7 =  winningArray[7];
-let x;
-for(let i=0;i<8;i++){
 
-  console.log(winningArray[i].map(e => arrayBoxes[e].innerText))
-}
 
 
 
 function checkBoxes(){
 
-
-  let foreachmapa0 = winningArray[0].map(e => arrayBoxes[e].innerText);
-  let foreachmapa1 = winningArray[1].map(e => arrayBoxes[e].innerText);
-  let foreachmapa2 = winningArray[2].map(e => arrayBoxes[e].innerText);
-  let foreachmapa3 = winningArray[3].map(e => arrayBoxes[e].innerText);
-  let foreachmapa4 = winningArray[4].map(e => arrayBoxes[e].innerText);
-  let foreachmapa5 = winningArray[5].map(e => arrayBoxes[e].innerText);
-  let foreachmapa6 = winningArray[6].map(e => arrayBoxes[e].innerText);
-  let foreachmapa7 = winningArray[7].map(e => arrayBoxes[e].innerText);
+//for(let i=0;i<8;i++){
+  let foreachmapa0 =   winningArray[0].map(e => arrayBoxes[e].innerText);
+  let foreachmapa1 =   winningArray[1].map(e => arrayBoxes[e].innerText);
+    let foreachmapa2 = winningArray[2].map(e => arrayBoxes[e].innerText);
+    let foreachmapa3 = winningArray[3].map(e => arrayBoxes[e].innerText);
+    let foreachmapa4 = winningArray[4].map(e => arrayBoxes[e].innerText);
+    let foreachmapa5 = winningArray[5].map(e => arrayBoxes[e].innerText);
+    let foreachmapa6 = winningArray[6].map(e => arrayBoxes[e].innerText);
+    let foreachmapa7 = winningArray[7].map(e => arrayBoxes[e].innerText);
     
-  
+    //  }
 let every0x =    foreachmapa0.every(a => a === iks);
 let every0o =    foreachmapa0.every(a => a === circle);
 let every1x =    foreachmapa1.every(a => a === iks);
@@ -112,7 +108,10 @@ boxes.forEach( e => {
     });
 
 function boxClick(e){
+  let myEelement = e; 
   let myTarget = e.target
+ let targetId = myTarget.id
+   
  if(arrayMark.length === 0){
  
    myTarget.innerText = iks;
@@ -123,6 +122,7 @@ function boxClick(e){
    arrayMark = [];
    }
   checkBoxes()
+  
 };
 
 

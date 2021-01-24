@@ -1,6 +1,4 @@
-*{
 
-}
 body{
 	margin: 0;
 	padding: 0;
@@ -28,3 +26,11 @@ body{
 	text-align: center;
 	line-height: 130px;
 }
+.boxes.middleX{
+border-bottom:none ;
+border-top:none ;
+}
+.boxes.middleY{
+	border-left:none ;
+	border-right:none ;
+	}
