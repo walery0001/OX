@@ -1,8 +1,13 @@
+// all div
 const boxes = document.querySelectorAll('.boxes');
+//player one x and two o
 const iks = 'X';
 const circle = 'O';
+//click - push player x and o
 let arrayMark = [];
+// nodelist to array
 let arrayBoxes = [...boxes];
+//win combination
 const winningArray = [
   [0,1,2],
   [3,4,5],
@@ -13,7 +18,7 @@ const winningArray = [
   [0,4,8],
   [2,4,6]
 ];
-
+//win combination one, two...
 let   horizontal0 =  winningArray[0];
 let   horizontal1 =  winningArray[1];
 let   horizontal2 =  winningArray[2];
@@ -22,17 +27,10 @@ let   horizontal4 =  winningArray[4];
 let   horizontal5 =  winningArray[5];
 let   horizontal6 =  winningArray[6];
 let   horizontal7 =  winningArray[7];
-let x;
-for(let i=0;i<8;i++){
-
-  console.log(winningArray[i].map(e => arrayBoxes[e].innerText))
-}
-
-
-
+//
 function checkBoxes(){
 
-
+// get innerText
   let foreachmapa0 = winningArray[0].map(e => arrayBoxes[e].innerText);
   let foreachmapa1 = winningArray[1].map(e => arrayBoxes[e].innerText);
   let foreachmapa2 = winningArray[2].map(e => arrayBoxes[e].innerText);
@@ -42,7 +40,7 @@ function checkBoxes(){
   let foreachmapa6 = winningArray[6].map(e => arrayBoxes[e].innerText);
   let foreachmapa7 = winningArray[7].map(e => arrayBoxes[e].innerText);
     
-  
+ //check  is it the same player 
 let every0x =    foreachmapa0.every(a => a === iks);
 let every0o =    foreachmapa0.every(a => a === circle);
 let every1x =    foreachmapa1.every(a => a === iks);
@@ -66,7 +64,7 @@ let every7o =    foreachmapa7.every(a => a === circle);
     //if(0,1,2 === test){
 
     //}
-
+// get every div
     let nr0 =  horizontal0[x];
     let nr1 =  horizontal1[x];
     let nr2 =  horizontal2[x];
@@ -76,7 +74,7 @@ let every7o =    foreachmapa7.every(a => a === circle);
     let nr6 =  horizontal6[x];
     let nr7 =  horizontal7[x];
 
-
+//check and for winner BG red 
 if(every0x || every0o){
   boxes[nr0].style.backgroundColor = 'red'
 }else if(every1x || every1o){
@@ -105,12 +103,12 @@ else if(every7x || every7o){
 //}
 }
 
-
+//click and only 0ne the same place
 boxes.forEach( e => {
     e.addEventListener('click', boxClick, {once:true})
         
     });
-
+//click player one nad two
 function boxClick(e){
   let myTarget = e.target
  if(arrayMark.length === 0){
